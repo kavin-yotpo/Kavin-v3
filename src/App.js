@@ -7,14 +7,13 @@ import ReviewsTab from "./components/ReviewsTab";
 import StarRating from "./components/StarRating";
 import UgcGallery from "./components/UgcGallery";
 
-
 function App() {
   //Instance ID
-  let InstanceId_Widget = "607215";
+  let InstanceId_Widget = "433901";
   let InstanceId_QA = "";
-  let InstanceId_SEO = "607213";
-  let InstanceId_Carousel = "607212";
-  let InstanceId_StarRating = "607214";
+  let InstanceId_SEO = "622016";
+  let InstanceId_Carousel = "555239";
+  let InstanceId_StarRating = "557423";
   let InstanceId_PromotedProd = "";
   let InstanceId_UgcGallery = "";
   let InstanceId_ReviewsTab = "";
@@ -120,9 +119,9 @@ function App() {
             clipboardsnippetnote={SnippetClipboardNote}
           />
 
-          <ReviewsTab 
-            instanceid={InstanceId_ReviewsTab} 
-            productid={ProductId} 
+          <ReviewsTab
+            instanceid={InstanceId_ReviewsTab}
+            productid={ProductId}
           />
         </div>
       </div>

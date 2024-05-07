@@ -4,7 +4,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 function StarRatingClipboard() {
   const [value, setValue] = useState(`
       <div class="yotpo-widget-instance" 
-      data-yotpo-instance-id="491372" 
+      data-yotpo-instance-id="557423" 
       data-yotpo-product-id="Product ID">
       </div>
     `);
@@ -20,21 +20,23 @@ function StarRatingClipboard() {
 
   return (
     <>
-        <textarea
-            disabled
-            contentEditable
-            spellCheck={false}
-            onFocus={(event) => event.target.select()}
-            type="text"
-            value={value}
-            onChange={({ target: { value } }) => {
-            setValue(value);
-            setCopied(false);
-            }}
-        />
-        <CopyToClipboard text={value} onCopy={() => setCopied(true)}>
-            <button type="button" className="btn btn-primary">{isCopied ? "Copied!" : "Copy Code"}</button>
-        </CopyToClipboard>
+      <textarea
+        disabled
+        contentEditable
+        spellCheck={false}
+        onFocus={(event) => event.target.select()}
+        type="text"
+        value={value}
+        onChange={({ target: { value } }) => {
+          setValue(value);
+          setCopied(false);
+        }}
+      />
+      <CopyToClipboard text={value} onCopy={() => setCopied(true)}>
+        <button type="button" className="btn btn-primary">
+          {isCopied ? "Copied!" : "Copy Code"}
+        </button>
+      </CopyToClipboard>
     </>
   );
 }
